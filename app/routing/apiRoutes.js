@@ -8,7 +8,7 @@ module.exports = function(app) {
 
     app.post("/api/friends", function(req, res){
         let newFriend = req.body
-        console.log(newFriend);
+        // console.log(newFriend);
 
         let newScores = newFriend.scores
 
@@ -27,12 +27,11 @@ module.exports = function(app) {
                 diffArray.push(totalDiff);
             }
             let min = Math.min.apply(Math, diffArray);
-            console.log(min)
+            // console.log(min)
             let matchIndex = diffArray.indexOf(min);
-            console.log(matchIndex)
-
+            // console.log(matchIndex)
             let match = friends[matchIndex];
-            console.log(match);
+            // console.log(match);
 
         friends.push(newFriend);
         res.json(match);
