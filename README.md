@@ -1,7 +1,7 @@
 # Friend Finder
 
 ### Link to Deployed Project:
-* 
+* https://mighty-mesa-84582.herokuapp.com/
 
 ### Instructions/Features:
 * Friend Finder is a compatibility-based application
@@ -9,5 +9,5 @@
 * When you submit your answers, they will be compared with other "users'" surveys and you will be shown who your best match is
 * Your answers will then be stored and compared to future survey submissions
 
-###Languages/Technologies Used:
+### Languages/Technologies Used:
 * HTML, CSS, Bootstrap, JavaScript, jQuery, Node.js, Express.js
