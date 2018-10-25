@@ -1,7 +1,7 @@
 # Friend Finder
 
 ### Link to Deployed Project:
-* https://mighty-mesa-84582.herokuapp.com/
+* https://friend-finder-84582.herokuapp.com/
 
 ### Instructions/Features:
 * Friend Finder is a compatibility-based application
