@@ -3,31 +3,46 @@
 <head>
     <meta charset="utf-8" />
     <title>Friend Finder</title>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
-    <!-- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"> -->
     <script src="https://code.jquery.com/jquery.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css" integrity="sha384-5sAR7xN1Nv6T6+dT2mhtzEpVJvfS3NScPQTrOxhwjIuvcA67KV2R5Jz6kr4abQsz" crossorigin="anonymous">
+    <!-- Compiled and minified CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+
+    <!-- Compiled and minified JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
   
 </head>
   
 <body>
 
     <div class="container">
-        <div class="jumbotron">
-            <h1><i class="fas fa-user-friends"></i> Friend Finder</h1>
-            <hr>
-            <h3>Answer a few questions.</h3>
-            <h3>Find a friend with the best compatability!</h3>
-            <br>
-            <a href="/survey"><button class="btn btn-primary btn-lg"><i class="far fa-list-alt"></i> Go to Survey</button></a>
+
+        <div class="row">
+            <div class="col m1"></div>
+            <div class="col m10">
+                <div class="card">
+                <div class="card-image">
+                    <!-- <img src="../../Images/stockphoto.jpg"> -->
+                    <img src="https://media.istockphoto.com/photos/friends-with-phone-outdoors-picture-id497677818?k=6&m=497677818&s=612x612&w=0&h=tsN0yZTAwBdiYefmhpvaDNp8il1dEhjhDMbPXPAtEcQ=">
+                    <span class="card-title">Friend Finder</span>
+                </div>
+                <div class="card-content">
+                    <p>Answer a few questions.</p>
+                    <p>Find a friend with the best compatability!</p>
+                </div>
+                <div class="card-action">
+                    <a href="/survey">Start the Survey!</a>
+                </div>
+                </div>
+                <div>
+                    <a href="/api/friends" target="_blank">API Friends List |</a>
+                    <a href="https://github.com/mnelson13/friend-finder" target="_blank">GitHub Repo</a>
+                </div>
+            </div>
+            <div class="col m1"></div>
         </div>
 
-        <div>
-            <a href="/api/friends" target="_blank">API Friends List |</a>
-            <a href="https://github.com/mnelson13/friend-finder" target="_blank">GitHub Repo</a>
-            <hr>
-        </div>
     </div>
     
 </body>

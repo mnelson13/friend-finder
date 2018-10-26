@@ -3,173 +3,202 @@
 <head>
     <meta charset="utf-8" />
     <title>Friend Finder</title>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
-    <!-- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"> -->
     <script src="https://code.jquery.com/jquery.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css" integrity="sha384-5sAR7xN1Nv6T6+dT2mhtzEpVJvfS3NScPQTrOxhwjIuvcA67KV2R5Jz6kr4abQsz" crossorigin="anonymous">
-  
+     <!-- Compiled and minified CSS -->
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+
+     <!-- Compiled and minified JavaScript -->
+     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+             
+
 </head>
   
 <body>
 
     <div class="container">
-        <!-- Button trigger modal -->
-        <!-- <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
-        Launch demo modal
-        </button> -->
-      
-      <!-- Modal -->
-      <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-        <div class="modal-dialog" role="document">
-          <div class="modal-content">
-            <div class="modal-header">
-              <h5 class="modal-title" id="exampleModalLabel">Your Best Match</h5>
-              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                <span aria-hidden="true">&times;</span>
-              </button>
-            </div>
-            <div class="modal-body" id="modalBody">
-              
+
+        <!-- Modal Trigger -->
+        <!-- <a class="waves-effect waves-light btn modal-trigger" href="#modal1">Modal</a> -->
+
+        <!-- Modal Structure -->
+        <div id="modal1" class="modal">
+            <div class="modal-content">
+                <h4>Your Best Match</h4>
+                <div id="modalBody">     
+                </div>
             </div>
             <div class="modal-footer">
-              <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-              <!-- <button type="button" class="btn btn-primary">Save changes</button> -->
+                <!-- <a href="#!" class="modal-close waves-effect waves-green btn-flat">Agree</a> -->
             </div>
-          </div>
         </div>
-      </div>
 
-      <!-- Survey Form-->
+        <!--Form-->
         <div>
-            <h1><i class="fas fa-user-friends"></i> Survey Questions</h1>
-            <hr>
+            <h2><i class="fas fa-user-friends"></i> Survey Questions</h2>
         </div>
-        <form>
-            <div class="form-group">
-                <h3>About You</h3>
-                <label for="name">Name</label>
-                <input type="text" class="form-control" id="name" placeholder="">
-            </div>
-            <div class="form-group">
-                <label for="photo">Link to Photo Image (Required)</label>
-                <input type="text" class="form-control" id="photo" placeholder="">
-                <hr>
-            </div>
-            
-            <div class="form-group">
-                <h3>Question 1</h3>
-                <label for="question1">I have a vivid imagination.</label>
-                <select class="form-control col-md-3" id="question1">
-                    <option>1 (strongly disagree)</option>
-                    <option>2</option>
-                    <option>3</option>
-                    <option>4</option>
-                    <option>5 (strongly agree)</option>
-                </select>
-            </div>
-            <div class="form-group">
-                <h3>Question 2</h3>
-                <label for="question2">I love large parties.</label>
-                <select class="form-control col-md-3" id="question2">
-                    <option>1 (strongly disagree)</option>
-                    <option>2</option>
-                    <option>3</option>
-                    <option>4</option>
-                    <option>5 (strongly agree)</option>
-                </select>
-            </div>
-            <div class="form-group">
-                <h3>Question 3</h3>
-                <label for="question3">I prefer variety to routine.</label>
-                <select class="form-control col-md-3" id="question3">
-                    <option>1 (strongly disagree)</option>
-                    <option>2</option>
-                    <option>3</option>
-                    <option>4</option>
-                    <option>5 (strongly agree)</option>
-                </select>
-            </div>
-            <div class="form-group">
-                <h3>Question 4</h3>
-                <label for="question4">I like to solve complex problems.</label>
-                <select class="form-control col-md-3" id="question4">
-                    <option>1 (strongly disagree)</option>
-                    <option>2</option>
-                    <option>3</option>
-                    <option>4</option>
-                    <option>5 (strongly agree)</option>
-                </select>
-            </div>
-            <div class="form-group">
-                <h3>Question 5</h3>
-                <label for="question5">I dislike being the center of attention.</label>
-                <select class="form-control col-md-3" id="question5">
-                    <option>1 (strongly disagree)</option>
-                    <option>2</option>
-                    <option>3</option>
-                    <option>4</option>
-                    <option>5 (strongly agree)</option>
-                </select>
-            </div>
-            <div class="form-group">
-                <h3>Question 6</h3>
-                <label for="question6">I try to follow the rules.</label>
-                <select class="form-control col-md-3" id="question6">
-                    <option>1 (strongly disagree)</option>
-                    <option>2</option>
-                    <option>3</option>
-                    <option>4</option>
-                    <option>5 (strongly agree)</option>
-                </select>
-            </div>
-            <div class="form-group">
-                <h3>Question 7</h3>
-                <label for="question7">I seek adventure</label>
-                <select class="form-control col-md-3" id="question7">
-                    <option>1 (strongly disagree)</option>
-                    <option>2</option>
-                    <option>3</option>
-                    <option>4</option>
-                    <option>5 (strongly agree)</option>
-                </select>
-            </div>
-            <div class="form-group">
-                <h3>Question 8</h3>
-                <label for="question8">I value cooperation over competition.</label>
-                <select class="form-control col-md-3" id="question8">
-                    <option>1 (strongly disagree)</option>
-                    <option>2</option>
-                    <option>3</option>
-                    <option>4</option>
-                    <option>5 (strongly agree)</option>
-                </select>
-            </div>
-            <div class="form-group">
-                <h3>Question 9</h3>
-                <label for="question9">I believe that others have good intentions.</label>
-                <select class="form-control col-md-3" id="question9">
-                    <option>1 (strongly disagree)</option>
-                    <option>2</option>
-                    <option>3</option>
-                    <option>4</option>
-                    <option>5 (strongly agree)</option>
-                </select>
-            </div>
-            <div class="form-group">
-                <h3>Question 10</h3>
-                <label for="question10">I can't stand confrontations.</label>
-                <select class="form-control col-md-3" id="question10">
-                    <option>1 (strongly disagree)</option>
-                    <option>2</option>
-                    <option>3</option>
-                    <option>4</option>
-                    <option>5 (strongly agree)</option>
-                </select>
-            </div>
-                    
-            <button type="submit" id="submit" class="btn btn-primary col-md-12">Submit</button>
-        </form>
+
+        <div class="row">
+            <form class="col s12">
+                <h5>About You</h5>  
+                <div class="row">
+                    <div class="input-field col s12">
+                        <input id="name" type="text" class="validate">
+                        <label for="name">Name</label>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="input-field col s12">
+                        <input id="photo" type="text" class="validate">
+                        <label for="photo">Link to Photo Image (Required</label>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col s12">
+                        <h5>Questions</h5>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="input-field col s12">
+                        <select id="question1">
+                            <option value="" disabled selected>I have a vivid imagination.</option>
+                            <option value="1">1 Strongly Disagree</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="5">5 Strongly Agree</option>
+                        </select>
+                        <label>Question One:</label>
+                    </div>
+                </div> 
+                <div class="row">
+                    <div class="input-field col s12">
+                        <select id="question2">
+                            <option value="" disabled selected>I love large parties.</option>
+                            <option value="1">1 Strongly Disagree</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="5">5 Strongly Agree</option>
+                        </select>
+                        <label>Question Two:</label>
+                    </div>
+                </div> 
+                <div class="row">
+                    <div class="input-field col s12">
+                        <select id="question3">
+                            <option value="" disabled selected>I prefer variety to routine.</option>
+                            <option value="1">1 Strongly Disagree</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="5">5 Strongly Agree</option>
+                        </select>
+                        <label>Question Three:</label>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="input-field col s12">
+                        <select id="question4">
+                            <option value="" disabled selected>I like to solve complex problems.</option>
+                            <option value="1">1 Strongly Disagree</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="5">5 Strongly Agree</option>
+                        </select>
+                        <label>Question Four:</label>
+                    </div>
+                </div> 
+                <div class="row">
+                    <div class="input-field col s12">
+                        <select id="question5">
+                            <option value="" disabled selected>I dislike being the center of attention.</option>
+                            <option value="1">1 Strongly Disagree</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="5">5 Strongly Agree</option>
+                        </select>
+                        <label>Question Five:</label>
+                    </div>
+                </div> 
+                <div class="row">
+                    <div class="input-field col s12">
+                        <select id="question6">
+                            <option value="" disabled selected>I try to follow the rules.</option>
+                            <option value="1">1 Strongly Disagree</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="5">5 Strongly Agree</option>
+                        </select>
+                        <label>Question Six:</label>
+                    </div>
+                </div> 
+                <div class="row">
+                    <div class="input-field col s12">
+                        <select id="question7">
+                            <option value="" disabled selected>I seek adventure</option>
+                            <option value="1">1 Strongly Disagree</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="5">5 Strongly Agree</option>
+                        </select>
+                        <label>Question Seven:</label>
+                    </div>
+                </div> 
+                <div class="row">
+                    <div class="input-field col s12">
+                        <select id="question8">
+                            <option value="" disabled selected>I value cooperation over competition.</option>
+                            <option value="1">1 Strongly Disagree</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="5">5 Strongly Agree</option>
+                        </select>
+                        <label>Question Eight:</label>
+                    </div>
+                </div> 
+                <div class="row">
+                    <div class="input-field col s12">
+                        <select id="question9">
+                            <option value="" disabled selected>I believe that others have good intentions.</option>
+                            <option value="1">1 Strongly Disagree</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="5">5 Strongly Agree</option>
+                        </select>
+                        <label>Question Nine:</label>
+                    </div>
+                </div> 
+                <div class="row">
+                    <div class="input-field col s12">
+                        <select id="question10">
+                            <option value="" disabled selected>I can't stand confrontations.</option>
+                            <option value="1">1 Strongly Disagree</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="5">5 Strongly Agree</option>
+                        </select>
+                        <label>Question Ten:</label>
+                    </div>
+                </div> 
+
+                
+                <div>
+                    <button class="btn waves-effect waves-light" id="submit" type="submit" name="action">Submit
+                        <i class="material-icons right">send</i>
+                    </button>
+                </div> 
+
+            </form>
+        </div>
 
         <div>
             <hr>
@@ -178,43 +207,54 @@
             <a href="/" target="_blank">Home</a>
             <hr>
         </div>
+
     </div>
 
     <script type="text/javascript">
-        $("#submit").on("click", function(event){
-            $("#modalBody").empty();
-            event.preventDefault();
 
-            let newFriend = {
-                name: $("#name").val().trim(),
-                photo: $("#photo").val().trim(),
-                scores: [
-                    $("#question1").val().trim().charAt(0),
-                    $("#question2").val().trim().charAt(0),
-                    $("#question3").val().trim().charAt(0),
-                    $("#question4").val().trim().charAt(0),
-                    $("#question5").val().trim().charAt(0),
-                    $("#question6").val().trim().charAt(0),
-                    $("#question7").val().trim().charAt(0),
-                    $("#question8").val().trim().charAt(0),
-                    $("#question9").val().trim().charAt(0),
-                    $("#question10").val().trim().charAt(0),
-                ]
-            };
-
-            $.post("/api/friends", newFriend)
-                .then(function(data){
-                    console.log(data);
-                    $('#myModal').modal('show')
-
-                    let newDiv = $("<div>")
-                    newDiv.append("<h3>" + data.name + "</h3>");
-                    newDiv.append("<img class='img-fluid' src='" + data.photo + "' alt='" + data.name + " picture' />");
-
-                    $("#modalBody").append(newDiv)
-                });
-        });
+        $(document).ready(function(){
+                
+            $('select').formSelect();
     
+            $("#submit").on("click", function(event){
+                $("#modalBody").empty();
+                event.preventDefault();
+
+                let newFriend = {
+                    name: $("#name").val().trim(),
+                    photo: $("#photo").val().trim(),
+                    scores: [
+                        $("#question1").val().trim().charAt(0),
+                        $("#question2").val().trim().charAt(0),
+                        $("#question3").val().trim().charAt(0),
+                        $("#question4").val().trim().charAt(0),
+                        $("#question5").val().trim().charAt(0),
+                        $("#question6").val().trim().charAt(0),
+                        $("#question7").val().trim().charAt(0),
+                        $("#question8").val().trim().charAt(0),
+                        $("#question9").val().trim().charAt(0),
+                        $("#question10").val().trim().charAt(0),
+                    ]
+                };
+
+                $.post("/api/friends", newFriend)
+                    .then(function(data){
+                        console.log(data);
+
+                        let newDiv = $("<div>")
+                        newDiv.append("<h3>" + data.name + "</h3>");
+                        newDiv.append("<img class='img-fluid' src='" + data.photo + "' alt='" + data.name + " picture' />");
+
+                        $("#modalBody").append(newDiv)
+
+                        $('#modal1').modal(); 
+                        $("#modal1").modal('open');
+
+                    }
+                );
+            });
+        });
+        
     </script>
     
 </body>
