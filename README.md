@@ -10,4 +10,4 @@
 * Your answers will then be stored and compared to future survey submissions
 
 ### Languages/Technologies Used:
-* HTML, CSS, Bootstrap, JavaScript, jQuery, Node.js, Express.js
+* HTML, CSS, Materialize, JavaScript, jQuery, Node.js, Express.js

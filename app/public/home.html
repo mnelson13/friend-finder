@@ -11,6 +11,11 @@
     <!-- Compiled and minified JavaScript -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <style>
+        body {
+            background-image: url("/images/dust_scratches.png")
+        }
+    </style>
   
 </head>
   
@@ -21,11 +26,11 @@
         <div class="row">
             <div class="col m1"></div>
             <div class="col m10">
-                <div class="card">
+                <div class="card z-depth-5">
                 <div class="card-image">
-                    <!-- <img src="../../Images/stockphoto.jpg"> -->
-                    <img src="https://media.istockphoto.com/photos/friends-with-phone-outdoors-picture-id497677818?k=6&m=497677818&s=612x612&w=0&h=tsN0yZTAwBdiYefmhpvaDNp8il1dEhjhDMbPXPAtEcQ=">
-                    <span class="card-title">Friend Finder</span>
+                    <img src="images/stockphoto.jpg">
+                    <!-- <img src="https://media.istockphoto.com/photos/friends-with-phone-outdoors-picture-id497677818?k=6&m=497677818&s=612x612&w=0&h=tsN0yZTAwBdiYefmhpvaDNp8il1dEhjhDMbPXPAtEcQ="> -->
+                    <span class="card-title orange-text lighten-2"><h4><b><i class="fas fa-user-friends"></i> Friend Finder</b></h4></span>
                 </div>
                 <div class="card-content">
                     <p>Answer a few questions.</p>
@@ -36,6 +41,7 @@
                 </div>
                 </div>
                 <div>
+                    <br>
                     <a href="/api/friends" target="_blank">API Friends List |</a>
                     <a href="https://github.com/mnelson13/friend-finder" target="_blank">GitHub Repo</a>
                 </div>

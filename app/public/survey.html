@@ -11,6 +11,20 @@
      <!-- Compiled and minified JavaScript -->
      <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
      <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+    <style>
+        body {
+            background-image: url("/images/dust_scratches.png")
+        }
+
+        .modal {
+            width: auto !important;
+            right: auto !important;
+            left: 50% !important;
+            transform: translateX(-50%) !important;
+        }
+
+    </style>
              
 
 </head>
@@ -22,26 +36,28 @@
         <!-- Modal Trigger -->
         <!-- <a class="waves-effect waves-light btn modal-trigger" href="#modal1">Modal</a> -->
 
-        <!-- Modal Structure -->
-        <div id="modal1" class="modal">
+        <!-- Modal Structure -->                 
+       <div id="modal1" class="modal">
             <div class="modal-content">
-                <h4>Your Best Match</h4>
-                <div id="modalBody">     
+                <div class="card">
+                    <div class="card-content" id="modalBody">
+                        
+                    </div>                                
+                    <div class="card-image" id="modalImage">
+                            
+                    </div>
                 </div>
-            </div>
-            <div class="modal-footer">
-                <!-- <a href="#!" class="modal-close waves-effect waves-green btn-flat">Agree</a> -->
             </div>
         </div>
 
         <!--Form-->
         <div>
-            <h2><i class="fas fa-user-friends"></i> Survey Questions</h2>
+            <h2 class="teal-text lighten-2"><i class="fas fa-user-friends"></i> Survey Questions</h2>
         </div>
 
         <div class="row">
             <form class="col s12">
-                <h5>About You</h5>  
+                <h5 class="teal-text lighten-4">About You</h5>  
                 <div class="row">
                     <div class="input-field col s12">
                         <input id="name" type="text" class="validate">
@@ -56,7 +72,7 @@
                 </div>
                 <div class="row">
                     <div class="col s12">
-                        <h5>Questions</h5>
+                        <h5 class="teal-text lighten-4">Questions</h5>
                     </div>
                 </div>
                 <div class="row">
@@ -201,7 +217,7 @@
         </div>
 
         <div>
-            <hr>
+            
             <a href="/api/friends" target="_blank">API Friends List |</a>
             <a href="https://github.com/mnelson13/friend-finder" target="_blank">GitHub Repo |</a>
             <a href="/" target="_blank">Home</a>
@@ -218,6 +234,8 @@
     
             $("#submit").on("click", function(event){
                 $("#modalBody").empty();
+                $("#modalImage").empty();
+
                 event.preventDefault();
 
                 let newFriend = {
@@ -241,11 +259,8 @@
                     .then(function(data){
                         console.log(data);
 
-                        let newDiv = $("<div>")
-                        newDiv.append("<h3>" + data.name + "</h3>");
-                        newDiv.append("<img class='img-fluid' src='" + data.photo + "' alt='" + data.name + " picture' />");
-
-                        $("#modalBody").append(newDiv)
+                        $("#modalBody").append("<h5> Your best match: " + data.name + "</h5>");
+                        $("#modalImage").append("<img class='responsive-img' src='" + data.photo + "' alt='" + data.name + " picture' />");
 
                         $('#modal1').modal(); 
                         $("#modal1").modal('open');
@@ -254,7 +269,7 @@
                 );
             });
         });
-        
+
     </script>
     
 </body>
