@@ -1,7 +1,7 @@
 let friends = [
     {
         name: "Leslie Knope",
-        photo: "https://timedotcom.files.wordpress.com/2014/04/478221211.jpg",
+        photo: "https://static3.srcdn.com/wordpress/wp-content/uploads/2017/05/Leslie-Knope-in-Parks-and-Recreation.jpg",
         scores: [
             4,
             4,
